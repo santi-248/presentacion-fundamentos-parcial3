@@ -146,16 +146,13 @@ function VizB() {
 
   // Each board state: which row (0-based) is the queen in each column
   const stages: number[][] = [
-    [],          // k=0 empty
-    [2],         // k=1
-    [2, 0],      // k=2
-    [2, 0, 3],   // k=3
+    [1],         // k=1
+    [1, 3],      // k=2
   ]
 
   // Horizontal layout: boards evenly spaced in the left 490px
-  const totalLeft = 490
-  const startX = 28
-  const spacing = (totalLeft - startX - boardW) / 3   // gap between board left edges
+  const startX = 60
+  const spacing = 82   // gap between board left edges
   const boardY = 80
 
   // Right-side tree (x from 530 to 820)
@@ -189,7 +186,7 @@ function VizB() {
           <path d="M0,0 L0,6 L6,3 z" fill={ACCENT_HEX} />
         </marker>
         <marker id="arrBD" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-          <path d="M0,0 L0,6 L6,3 z" fill="#333" />
+          <path d="M0,0 L0,6 L6,3 z" fill="#555" />
         </marker>
       </defs>
 
@@ -226,9 +223,9 @@ function VizB() {
             ))}
             {/* Tuple label */}
             <text x={ox + boardW / 2} y={boardY + COLS * SZ + 16}
-              fill={si === 2 ? ACCENT_HEX : '#3a3a3a'} fontSize="9.5" textAnchor="middle"
+              fill={si === 1 ? ACCENT_HEX : '#888'} fontSize="9.5" textAnchor="middle"
               fontFamily="'JetBrains Mono','Fira Code',monospace">
-              {si === 0 ? '( )' : `(${queens.join(', ')})`}
+              {`(${queens.join(', ')})`}
             </text>
           </g>
         )
@@ -239,11 +236,11 @@ function VizB() {
         const ax = startX + si * (boardW + spacing) + boardW + 3
         const bx = startX + (si + 1) * (boardW + spacing) - 3
         const ay = boardY + (COLS * SZ) / 2
-        const isActive = si === 1   // highlight second arrow
+        const isActive = true   // highlight the only arrow
         return (
           <line key={si} className={`dl-${si + 1}`}
             x1={ax} y1={ay} x2={bx} y2={ay}
-            stroke={isActive ? ACCENT_HEX : '#252525'}
+            stroke={isActive ? ACCENT_HEX : '#555'}
             strokeWidth={isActive ? '1.8' : '1'}
             markerEnd={isActive ? 'url(#arrBY)' : 'url(#arrBD)'} />
         )
@@ -256,7 +253,7 @@ function VizB() {
         return (
           <line key={i} className="dl-2"
             x1={p.x} y1={p.y + R} x2={c.x} y2={c.y - R}
-            stroke="#1e1e1e" strokeWidth="1" markerEnd="url(#arrBD)" />
+            stroke="#555" strokeWidth="1" markerEnd="url(#arrBD)" />
         )
       })}
       {/* Nodes */}
@@ -264,9 +261,9 @@ function VizB() {
         <g key={n.id} className="pop-3">
           <circle cx={n.x} cy={n.y} r={R}
             fill="#0c0c0c"
-            stroke={n.hi ? ACCENT_HEX : '#252525'}
+            stroke={n.hi ? ACCENT_HEX : '#666'}
             strokeWidth={n.hi ? '1.5' : '1'} />
-          <text x={n.x} y={n.y + 3.5} fill={n.hi ? ACCENT_HEX : '#383838'}
+          <text x={n.x} y={n.y + 3.5} fill={n.hi ? ACCENT_HEX : '#aaa'}
             fontSize="7" fontWeight="600" textAnchor="middle"
             fontFamily="'JetBrains Mono','Fira Code',monospace">
             {n.label}
@@ -275,7 +272,7 @@ function VizB() {
       ))}
 
       {/* Divider line between left and right */}
-      <line x1={518} y1={30} x2={518} y2={370} stroke="#1a1a1a" strokeWidth="1" />
+      <line x1={518} y1={30} x2={518} y2={370} stroke="#333" strokeWidth="1" />
     </svg>
   )
 }
@@ -705,22 +702,16 @@ const resolution = (
       <div className="pp-step-lower">
         <div className="pp-step-body">
           <p>
-            Una arista es simplemente <strong>tu próxima jugada</strong>: conecta el tablero actual
-            (c₁,…,cₖ) con el tablero después de colocar una reina segura en la siguiente columna —
-            (c₁,…,cₖ, cₖ₊₁). Nada más. Avanzar por esa línea es <em>pasar de turno</em>.
-          </p>
-          <p>
-            El modelo nos obliga a llenar el tablero <strong>estrictamente de la columna 1 a la 8</strong>.
-            Esto significa que cada tablero parcial tiene una <em>única historia posible</em>: si tenés
-            tres reinas en las tres primeras columnas, solo existe un camino de cómo llegaste ahí.
-            Como el orden de llenado nunca se puede intercambiar, los caminos solo se <strong>ramifican
-            hacia abajo</strong> — sin atajos, sin cruces, sin vuelta en U. Por eso no hay ciclos y
-            la estructura tiene <strong>anatomía de árbol</strong>.
+            Las aristas representan <strong>transiciones de estado válidas</strong>: conectan un nodo
+            (c₁,…,cₖ) con su hijo (c₁,…,cₖ, cₖ₊₁), agregando exactamente una reina segura.
+            El grafo forma un <strong>árbol con raíz en el vector vacío</strong> porque cada
+            configuración parcial se deriva de una única secuencia de decisiones — no existen
+            ciclos ni múltiples caminos hacia un mismo estado parcial exacto.
           </p>
         </div>
         <div className="pp-step-title-row">
           <div className="pp-step-num-col"><span className="pp-step-num-circle">Paso 02</span></div>
-          <div className="pp-step-content"><h3 className="pp-step-heading">Aristas y Estructura de Árbol</h3></div>
+          <div className="pp-step-content"><h3 className="pp-step-heading">Estructura de Árbol</h3></div>
         </div>
       </div>
     </div>
