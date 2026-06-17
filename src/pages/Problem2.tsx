@@ -652,10 +652,6 @@ const resolution = (
               <stop offset="50%" stopColor="#ffffff" stopOpacity="0.05" />
               <stop offset="100%" stopColor={B_COLOR} stopOpacity="0.15" />
             </linearGradient>
-            <filter id="glow">
-              <feGaussianBlur stdDeviation="3" result="blur" />
-              <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
-            </filter>
           </defs>
 
           {/* ── Header label ── */}
@@ -671,7 +667,7 @@ const resolution = (
           <text x={196} y={86} fill="rgba(255,255,255,0.3)" fontSize="8.5" fontFamily="Inter,sans-serif" textAnchor="middle" letterSpacing="0.1em">ESTABLE · PREDECIBLE</text>
 
           {/* Score dots A — 4 pros, 2 cons → score 4/6 */}
-          {[0,1,2,3,4,5].map(i => (
+          {[0, 1, 2, 3, 4, 5].map(i => (
             <circle key={i} cx={162 + i * 14} cy={98} r={4}
               fill={i < 4 ? A_COLOR : 'rgba(255,255,255,0.1)'}
               opacity={i < 4 ? 0.85 : 1} />
@@ -690,20 +686,6 @@ const resolution = (
             </g>
           ))}
 
-          {/* separator */}
-          <line x1={46} y1={238} x2={350} y2={238} stroke={`${A_COLOR}30`} strokeWidth="1" />
-
-          {/* Cons */}
-          {[
-            'Media más lenta: 7,50 s',
-            'Solo el 6% finaliza en < 5 s',
-          ].map((t, i) => (
-            <g key={i}>
-              <rect x={46} cy={250 + i * 26} y={246 + i * 26} width={7} height={7} fill="rgba(255,255,255,0.08)" rx={1.5} />
-              <text x={62} y={256 + i * 26} fill="rgba(255,255,255,0.28)" fontSize="9" fontFamily="Inter,sans-serif">{t}</text>
-            </g>
-          ))}
-
           {/* ══ PANEL B ══ */}
           <rect x={437} y={38} width={335} height={248} fill="url(#gradB)" rx={10} stroke={B_COLOR} strokeWidth="1" strokeOpacity="0.4" />
           <rect x={437} y={38} width={335} height={4} fill={B_COLOR} rx={2} opacity={0.75} />
@@ -712,7 +694,7 @@ const resolution = (
           <text x={605} y={86} fill="rgba(255,255,255,0.3)" fontSize="8.5" fontFamily="Inter,sans-serif" textAnchor="middle" letterSpacing="0.1em">VELOZ · EFICIENTE</text>
 
           {/* Score dots B — 4 pros → 4/6 */}
-          {[0,1,2,3,4,5].map(i => (
+          {[0, 1, 2, 3, 4, 5].map(i => (
             <circle key={i} cx={571 + i * 14} cy={98} r={4}
               fill={i < 4 ? B_COLOR : 'rgba(255,255,255,0.1)'}
               opacity={i < 4 ? 0.9 : 1} />
@@ -731,35 +713,11 @@ const resolution = (
             </g>
           ))}
 
-          <line x1={455} y1={238} x2={759} y2={238} stroke={`${B_COLOR}30`} strokeWidth="1" />
-
-          {/* Cons */}
-          {[
-            'Asimetría 1,31 — cola de demoras',
-            'Desviación mayor: 2,51 s (errático)',
-          ].map((t, i) => (
-            <g key={i}>
-              <rect x={455} y={246 + i * 26} width={7} height={7} fill="rgba(255,255,255,0.08)" rx={1.5} />
-              <text x={471} y={256 + i * 26} fill="rgba(255,255,255,0.28)" fontSize="9" fontFamily="Inter,sans-serif">{t}</text>
-            </g>
-          ))}
 
           {/* ══ VS divider ══ */}
           <line x1={400} y1={48} x2={400} y2={282} stroke="rgba(255,255,255,0.07)" strokeWidth="1" strokeDasharray="4,4" />
           <circle cx={400} cy={163} r={18} fill="#0a0f1c" stroke="rgba(255,255,255,0.12)" strokeWidth="1" />
           <text x={400} y={169} fill="rgba(255,255,255,0.3)" fontSize="11" fontFamily="Inter,sans-serif" fontWeight="900" textAnchor="middle">VS</text>
-
-          {/* ══ VERDICT BANNER ══ */}
-          <rect x={28} y={298} width={744} height={72} fill="url(#gradVerdict)" rx={10} stroke="rgba(255,255,255,0.08)" strokeWidth="1" />
-          <rect x={28} y={298} width={744} height={2} fill="rgba(255,255,255,0.12)" rx={1} />
-
-          <text x={400} y={322} fill="rgba(255,255,255,0.22)" fontSize="7.5" fontFamily="Inter,sans-serif" fontWeight="800" letterSpacing="0.2em" textAnchor="middle">VEREDICTO</text>
-          <text x={400} y={344} fill="rgba(255,255,255,0.75)" fontSize="11" fontFamily="Inter,sans-serif" fontWeight="700" textAnchor="middle">
-            B → velocidad máxima · A → estabilidad crítica
-          </text>
-          <text x={400} y={360} fill="rgba(255,255,255,0.35)" fontSize="8.5" fontFamily="Inter,sans-serif" textAnchor="middle">
-            Elección según contexto: cloud / UX → B  ·  tiempo real / SLA → A
-          </text>
         </svg>
       </div>
       <div className="pp-step-lower">
