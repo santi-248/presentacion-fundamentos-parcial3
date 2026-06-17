@@ -607,7 +607,9 @@ function AnimatedTrajectory() {
 const theoryItems = [
   'Números complejos (forma binómica)',
   'Operaciones en plano complejo',
-  'Forma exponencial (Fórmula de Euler)',
+  'Forma exponencial',
+  'Fórmula de Traslación',
+  'Fórmula de Euler',
   'Identidad de Euler',
   'Cinemática y funciones paramétricas',
 ]
@@ -622,7 +624,7 @@ const approach = (
       que representa la constante de desplazamiento espacial ((2i + 1)·z₀).
     </p>
     <p>
-      Primero resolvemos el bloque estático sustituyendo z₀ = 1 + i y expandiendo el producto de complejos,
+      Primero resolvemos el bloque estático usando la posición inicial y expandiendo el producto de complejos,
       usando i² = −1. Esto nos deja una ecuación simplificada con un centro de rotación fijo.
       Luego aplicamos la <strong>Identidad de Euler</strong> (eⁱᵖ = −1) para evaluar el bloque dinámico
       en t = π, obteniendo la posición final del dron. Finalmente validamos el resultado geométricamente.
@@ -692,8 +694,7 @@ const resolution = (
             Por lo tanto z(π) = <strong>−1 − 1 + 3i = −2 + 3i</strong>.
             La posición del dron en t = π es la coordenada <strong>(−2, 3)</strong> del plano complejo.
             La trayectoria completa de t = 0 a t = π es el semicírculo superior con centro en (−1, 3)
-            y radio 1, confirmado visualmente en GeoGebra con la curva paramétrica
-            x = cos(t) − 1, y = sin(t) + 3.
+            y radio 1.
           </p>
         </div>
         <div className="pp-step-title-row">
