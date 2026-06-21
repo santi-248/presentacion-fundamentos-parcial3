@@ -1038,3 +1038,48 @@ body {
 .delay-5 {
   animation-delay: 500ms;
 }
+
+/* ============================================
+   Responsive Grid Utilities
+   ============================================ */
+.responsive-grid-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.responsive-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.responsive-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.problem-row {
+  display: grid;
+  grid-template-columns: 7rem 1fr auto;
+  align-items: start;
+  gap: 2.5rem;
+  padding: 3.5rem 0;
+  border-bottom: 1px solid rgba(17,17,17,0.1);
+  transition: background 300ms var(--ease-editorial);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .responsive-grid-2,
+  .responsive-grid-3 {
+    grid-template-columns: 1fr;
+  }
+  
+  .problem-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2rem 0;
+  }
+}

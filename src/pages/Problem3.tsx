@@ -42,7 +42,7 @@ const resolution = (
       <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 75%' }}>
         <p className="pp-step-category">Modelo de Actores</p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1rem', marginTop: '1.5rem' }}>
+        <div className="responsive-grid-3" style={{ marginTop: '1.5rem' }}>
           <div style={{
             background: 'rgba(131, 221, 156, 0.1)',
             border: `2px solid ${C_SAGE}`,
@@ -109,7 +109,7 @@ const resolution = (
       <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 75%' }}>
         <p className="pp-step-category">Especificación Funcional</p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1rem', marginTop: '1rem', fontFamily: 'Inter, sans-serif' }}>
+        <div className="responsive-grid-1" style={{ marginTop: '1rem', fontFamily: 'Inter, sans-serif' }}>
 
           <div style={{
             background: 'rgba(131, 221, 156, 0.05)',

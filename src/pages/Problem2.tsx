@@ -115,7 +115,7 @@ const resolution = (
       <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 75%' }}>
         <p className="pp-step-category">Definición de Alcances</p>
         
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginTop: '1rem' }}>
+        <div className="responsive-grid-2" style={{ marginTop: '1rem' }}>
           <div style={{
             background: 'rgba(217, 119, 144, 0.05)',
             border: `1px solid ${C_PINK}`,

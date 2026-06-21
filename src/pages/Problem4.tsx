@@ -44,7 +44,7 @@ const resolution = (
       <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 75%' }}>
         <p className="pp-step-category">Stack Tecnológico</p>
         
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1rem', marginTop: '1.5rem' }}>
+        <div className="responsive-grid-1" style={{ marginTop: '1.5rem' }}>
           <div style={{
             background: 'rgba(255, 193, 7, 0.1)',
             border: `2px solid ${C_YELLOW}`,
@@ -102,7 +102,7 @@ const resolution = (
       <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 75%' }}>
         <p className="pp-step-category">Entidades del Negocio</p>
         
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.8rem', marginTop: '1rem' }}>
+        <div className="responsive-grid-2" style={{ marginTop: '1rem' }}>
           {classes.slice(0, 6).map((cls, idx) => (
             <div key={idx} style={{
               background: 'rgba(255, 193, 7, 0.05)',
@@ -142,7 +142,7 @@ const resolution = (
       <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 75%' }}>
         <p className="pp-step-category">Entidades del Negocio</p>
         
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.8rem', marginTop: '1rem' }}>
+        <div className="responsive-grid-2" style={{ marginTop: '1rem' }}>
           {classes.slice(6, 10).map((cls, idx) => (
             <div key={idx} style={{
               background: 'rgba(255, 193, 7, 0.05)',

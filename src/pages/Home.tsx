@@ -224,16 +224,7 @@ export default function Home() {
               <Link to={p.path} style={{ textDecoration: 'none', display: 'block' }}>
                 <div
                   className="problem-row"
-                  style={{
-                    display: 'grid',
-                    gridTemplateColumns: '7rem 1fr auto',
-                    alignItems: 'start',
-                    gap: '2.5rem',
-                    padding: '3.5rem 0',
-                    borderBottom: '1px solid rgba(17,17,17,0.1)',
-                    transition: 'background 300ms var(--ease-editorial)',
-                    cursor: 'pointer',
-                  }}
+                  style={{}}
                   onMouseEnter={e => {
                     (e.currentTarget as HTMLElement).style.background = 'rgba(17,17,17,0.018)'
                   }}
