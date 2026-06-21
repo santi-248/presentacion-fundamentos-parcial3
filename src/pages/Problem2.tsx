@@ -16,13 +16,13 @@ const theoryItems = [
 const approach = (
   <>
     <p>
-      El sistema está estructurado sobre <strong>dos módulos centrales</strong> que cubren necesidades operativas y estratégicas diferenciadas. El primero es el núcleo transaccional: el "motor del día a día" que permite registro concurrente de ventas, actualización automática de stock en tiempo real, y administración de cuentas corrientes por cliente.
+      El sistema está estructurado sobre dos módulos centrales que cubren necesidades operativas y estratégicas diferenciadas:
     </p>
     <p>
-      El segundo es el módulo analítico-gerencial: el "cerebro estratégico" que provee un dashboard de métricas en tiempo real, predicción matemática de quiebres de stock usando análisis histórico, y un simulador de escenarios empresariales (análisis "what-if") para anticipar impactos financieros antes de implementar cambios.
+      Primero, el <strong>núcleo transaccional</strong>, que permite registro concurrente de ventas, actualización automática de stock en tiempo real y administración de cuentas corrientes por cliente.
     </p>
     <p>
-      <strong>Limitaciones deliberadas:</strong> El sistema NO incluye integración automática con ARCA (ex AFIP) para validación de facturas en tiempo real, NO realiza compras automáticas a proveedores, y NO cuenta con portal E-commerce para venta final al público. Estas restricciones mantienen el foco en control interno y decisiones gerenciales.
+      Segundo, el <strong>módulo analítico-gerencial</strong>, que provee un dashboard de métricas en tiempo real, predicción matemática de quiebres de stock usando análisis histórico, y un simulador de escenarios empresariales para anticipar impactos financieros antes de implementar cambios.
     </p>
   </>
 )

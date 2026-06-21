@@ -13,13 +13,10 @@ const theoryItems = [
 const approach = (
   <>
     <p>
-      El <strong>Sistema de Control de Inventario y Proyección de Negocio</strong> se ha desarrollado como respuesta integral a las necesidades operativas y estratégicas de la empresa. La solución combina tres pilares fundamentales: un núcleo transaccional para el "día a día", un módulo analítico para visualizar el estado actual, y un simulador de escenarios para la toma de decisiones anticipadas.
+      El sistema se ha desarrollado como respuesta integral a las necesidades operativas y estratégicas de la empresa. La solución combina tres pilares fundamentales: un <strong>núcleo transaccional</strong> para el "día a día", un <strong>módulo analítico</strong> para visualizar el estado actual, y un <strong>simulador de escenarios</strong> para la toma de decisiones anticipadas.
     </p>
     <p>
-      El sistema registra ventas en tiempo real, actualiza automáticamente el stock en cada sucursal, gestiona cuentas corrientes de clientes, y proporciona un motor de predicciones matemáticas que estima cuándo agotaremos inventario. Esto permite a la gerencia simular "¿qué pasaría si...?" y fundamentar decisiones sobre precios, stock y rentabilidad.
-    </p>
-    <p>
-      La arquitectura se sustenta en <strong>10 clases de objetos interrelacionados</strong> que manejan desde el producto hasta la simulación de escenarios, garantizando escalabilidad y acceso remoto mediante una base de datos en Cloud. El resultado es una herramienta que transforma datos en inteligencia de negocio.
+      Faro registra ventas en tiempo real, actualiza automáticamente el stock en cada sucursal, gestiona cuentas corrientes de clientes, y proporciona un motor de predicciones matemáticas que estima cuándo agotaremos inventario. Esto permite a la gerencia simular "¿qué pasaría si...?" y fundamentar decisiones sobre precios, stock y rentabilidad.
     </p>
   </>
 )
