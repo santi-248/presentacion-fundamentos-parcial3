@@ -62,16 +62,17 @@ export default function Navigation() {
                   transition: 'color 400ms var(--ease-editorial)',
                 }}
               >
-                EGI
+                Parcial 3 - 
               </span>
               <span
                 style={{
                   fontFamily: 'var(--font-display)',
                   fontSize: '1.5rem',
                   color: 'var(--accent-orange)',
+                  marginLeft: '0.3rem',
                 }}
               >
-                2026
+                Fundamentos
               </span>
             </NavLink>
 
