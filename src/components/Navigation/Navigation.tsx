@@ -5,12 +5,11 @@ import { Menu, X } from 'lucide-react'
 
 const navItems = [
   { path: '/', label: 'Inicio' },
-  { path: '/problema/1', label: 'P.01 Matrices' },
-  { path: '/problema/2', label: 'P.02 Estadística' },
-  { path: '/problema/3', label: 'P.03 Ocho Reinas' },
-  { path: '/problema/4', label: 'P.04 Grafos' },
-  { path: '/problema/5', label: 'P.05 Transformaciones' },
-  { path: '/problema/6', label: 'P.06 Complejos' },
+  { path: '/problema/1', label: 'P.01 Visión General' },
+  { path: '/problema/2', label: 'P.02 Alcances' },
+  { path: '/problema/3', label: 'P.03 Actores UML' },
+  { path: '/problema/4', label: 'P.04 Arquitectura' },
+  { path: '/problema/5', label: 'P.05 Pruebas' },
 ]
 
 export default function Navigation() {

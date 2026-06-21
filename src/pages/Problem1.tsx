@@ -1,37 +1,35 @@
 import ProblemPage from '../components/ProblemPage/ProblemPage'
 
 const ACCENT = 'var(--accent-orange)'
-const C_ORANGE = 'var(--accent-orange)'
-const C_PINK = 'var(--accent-pink)'
-const C_BLUE = 'var(--accent-blue)'
-const C_SAGE = 'var(--accent-sage)'
-const C_YELLOW = 'var(--accent-yellow)'
 
 const theoryItems = [
-  'Matrices m×n',
-  'Producto escalar',
-  'No conmutatividad',
-  'Matriz Transpuesta',
-  'Álgebra Lineal',
+  'Herramienta Integral',
+  'Gestión de Ventas',
+  'Control de Inventario',
+  'Análisis de Métricas',
+  'Decisiones Estratégicas',
 ]
 
 const approach = (
   <>
     <p>
-      Primero, identificamos las variables más importantes para describir las capacidades del equipo: los lenguajes que maneja cada programador, sus años de experiencia y su nivel de dominio. A partir de esta información, decidimos representar los datos mediante tres matrices, de modo que cada una reflejara un aspecto específico del análisis y permitiera trabajar la información de manera ordenada.
+      El <strong>Sistema de Control de Inventario y Proyección de Negocio</strong> se ha desarrollado como respuesta integral a las necesidades operativas y estratégicas de la empresa. La solución combina tres pilares fundamentales: un núcleo transaccional para el "día a día", un módulo analítico para visualizar el estado actual, y un simulador de escenarios para la toma de decisiones anticipadas.
     </p>
     <p>
-      Luego, planteamos la multiplicación en serie de las matrices para combinar estos tres factores y obtener una visión global del equipo. Con los resultados buscamos identificar qué lenguaje presenta el mayor dominio general, analizar cuáles son las combinaciones más convenientes de habilidades y elaborar una recomendación fundamentada para la asignación de tareas dentro del grupo.
+      El sistema registra ventas en tiempo real, actualiza automáticamente el stock en cada sucursal, gestiona cuentas corrientes de clientes, y proporciona un motor de predicciones matemáticas que estima cuándo agotaremos inventario. Esto permite a la gerencia simular "¿qué pasaría si...?" y fundamentar decisiones sobre precios, stock y rentabilidad.
+    </p>
+    <p>
+      La arquitectura se sustenta en <strong>10 clases de objetos interrelacionados</strong> que manejan desde el producto hasta la simulación de escenarios, garantizando escalabilidad y acceso remoto mediante una base de datos en Cloud. El resultado es una herramienta que transforma datos en inteligencia de negocio.
     </p>
   </>
 )
 
 const resolution = (
   <>
-    {/* Step 1 */}
+    {/* Módulo 1 */}
     <div className="pp-step">
       <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative' }}>
-        <p className="pp-step-category">Matriz Transpuesta y Multiplicación</p>
+        <p className="pp-step-category">Núcleo Transaccional</p>
         <svg
           viewBox="0 0 800 380"
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
@@ -39,164 +37,84 @@ const resolution = (
         >
           <defs>
             <style>{`
-              @keyframes fadeSlideRight { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; transform: translateX(0); } }
-              .anim-matrix-x { opacity: 0; animation: fadeSlideRight 0.8s ease forwards 0.4s; }
+              @keyframes fadeSlideUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+              @keyframes popIn { from { transform: scale(0.7); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+              .box-1 { opacity: 0; animation: fadeSlideUp 0.7s ease forwards 0.2s; }
+              .box-2 { opacity: 0; animation: fadeSlideUp 0.7s ease forwards 0.4s; }
+              .box-3 { opacity: 0; animation: fadeSlideUp 0.7s ease forwards 0.6s; }
+              .arrow-1 { opacity: 0; animation: fadeSlideUp 0.7s ease forwards 0.5s; }
+              .arrow-2 { opacity: 0; animation: fadeSlideUp 0.7s ease forwards 0.7s; }
             `}</style>
           </defs>
 
-          {/* Matrix A (4x3) */}
-          <text x={150} y={60} fill="#888" fontSize="12" fontWeight="700" textAnchor="middle" fontFamily="Inter,sans-serif" letterSpacing="0.1em">A</text>
-          {[
-            [1, 1, 1],
-            [1, 1, 1],
-            [1, 1, 1],
-            [1, 1, 1]
-          ].map((row, r) =>
-            row.map((val, c) => (
-              <text key={`a-${r}-${c}`} x={110 + c * 40} y={120 + r * 45} fill="#ddd" fontSize="22" fontWeight="300" textAnchor="middle" fontFamily="Inter,sans-serif">{val}</text>
-            ))
-          )}
-          <path d="M 95 95 L 85 95 L 85 265 L 95 265" stroke="#444" strokeWidth="1.5" fill="none" />
-          <path d="M 205 95 L 215 95 L 215 265 L 205 265" stroke="#444" strokeWidth="1.5" fill="none" />
+          {/* Title */}
+          <text x={400} y={35} fill="rgba(255,255,255,0.7)" fontSize="13" fontWeight="700" textAnchor="middle" fontFamily="Inter,sans-serif" letterSpacing="0.1em">OPERACIONES CONCURRENTES EN TIEMPO REAL</text>
 
-          <text x={260} y={185} fill={C_PINK} fontSize="28" textAnchor="middle" fontFamily="Inter,sans-serif" fontWeight="300">×</text>
-
-          {/* Matrix B^T (3x4) */}
-          <text x={380} y={60} fill="#888" fontSize="12" fontWeight="700" textAnchor="middle" fontFamily="Inter,sans-serif" letterSpacing="0.1em">B<tspan dy="-5" fontSize="9">T</tspan></text>
-          {[
-            [3, 3, 3, 6],
-            [4, 5, 5, 2],
-            [2, 2, 4, 2]
-          ].map((row, r) =>
-            row.map((val, c) => (
-              <text key={`bt-${r}-${c}`} x={320 + c * 40} y={142.5 + r * 45} fill="#ddd" fontSize="22" fontWeight="300" textAnchor="middle" fontFamily="Inter,sans-serif">{val}</text>
-            ))
-          )}
-          <path d="M 305 117.5 L 295 117.5 L 295 242.5 L 305 242.5" stroke="#444" strokeWidth="1.5" fill="none" />
-          <path d="M 455 117.5 L 465 117.5 L 465 242.5 L 455 242.5" stroke="#444" strokeWidth="1.5" fill="none" />
-
-          <text x={510} y={185} fill={C_PINK} fontSize="28" textAnchor="middle" fontFamily="Inter,sans-serif" fontWeight="300">=</text>
-
-          {/* Matrix X (4x4) */}
-          <g className="anim-matrix-x">
-            <text x={615} y={60} fill={C_YELLOW} fontSize="12" fontWeight="700" textAnchor="middle" fontFamily="Inter,sans-serif" letterSpacing="0.1em">X</text>
-            {[
-              [9, 10, 12, 10],
-              [9, 10, 12, 10],
-              [9, 10, 12, 10],
-              [9, 10, 12, 10]
-            ].map((row, r) =>
-              row.map((val, c) => (
-                <text key={`x-${r}-${c}`} x={555 + c * 40} y={120 + r * 45} fill={C_YELLOW} fontSize="22" fontWeight="600" textAnchor="middle" fontFamily="Inter,sans-serif">{val}</text>
-              ))
-            )}
-            <path d="M 540 95 L 530 95 L 530 265 L 540 265" stroke={C_YELLOW} strokeOpacity="0.5" strokeWidth="1.5" fill="none" />
-            <path d="M 690 95 L 700 95 L 700 265 L 690 265" stroke={C_YELLOW} strokeOpacity="0.5" strokeWidth="1.5" fill="none" />
+          {/* Box 1: Sales Registration */}
+          <g className="box-1">
+            <rect x={50} y={80} width={180} height={120} fill="rgba(233, 93, 53, 0.12)" rx="6" stroke="var(--accent-orange)" strokeWidth="2" />
+            <text x={140} y={110} fill="var(--accent-orange)" fontSize="14" fontWeight="700" textAnchor="middle" fontFamily="Inter,sans-serif">Registro de Ventas</text>
+            <text x={140} y={130} fill="rgba(255,255,255,0.5)" fontSize="11" textAnchor="middle" fontFamily="Inter,sans-serif">• Cargar productos</text>
+            <text x={140} y={145} fill="rgba(255,255,255,0.5)" fontSize="11" textAnchor="middle" fontFamily="Inter,sans-serif">• Crear transacciones</text>
+            <text x={140} y={160} fill="rgba(255,255,255,0.5)" fontSize="11" textAnchor="middle" fontFamily="Inter,sans-serif">• Emitir facturas</text>
+            <text x={140} y={180} fill="var(--accent-orange)" fontSize="10" fontWeight="600" textAnchor="middle" fontFamily="Inter,sans-serif">(CU01, CU02)</text>
           </g>
 
-          <text x={400} y={330} fill="#666" fontSize="12" textAnchor="middle" fontFamily="Inter,sans-serif" letterSpacing="0.05em">
-            A(4×3) × B<tspan dy="-5" fontSize="9">T</tspan><tspan dy="5">(3×4)</tspan> = X(4×4)
-          </text>
-        </svg>
-      </div>
-      <div className="pp-step-lower">
-        <div className="pp-step-body">
-          <p>Para hacer la multiplicación en serie tuvimos que utilizar la matriz transpuesta de B (cambiando filas por columnas). Al transponer B obtenemos B<sup>T</sup>(3×4), lo que nos permite realizar la multiplicación A(4×3) × B<sup>T</sup>(3×4) y obtener la matriz X(4×4).</p>
-        </div>
-        <div className="pp-step-title-row">
-          <div className="pp-step-num-col"><span className="pp-step-num-circle">Paso 01</span></div>
-          <div className="pp-step-content"><h3 className="pp-step-heading">Multiplicación Inicial</h3></div>
-        </div>
-      </div>
-    </div>
-
-    {/* Step 2 */}
-    <div className="pp-step">
-      <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative' }}>
-        <p className="pp-step-category">Cálculo del Dominio Global</p>
-        <svg
-          viewBox="0 0 800 380"
-          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
-          preserveAspectRatio="xMidYMid meet"
-        >
-          <defs>
-            <style>{`
-              @keyframes fadeSlideRight { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; transform: translateX(0); } }
-              .anim-matrix-r { opacity: 0; animation: fadeSlideRight 0.8s ease forwards 0.4s; }
-            `}</style>
-          </defs>
-
-          {/* Matrix X (4x4) */}
-          <text x={170} y={60} fill={C_YELLOW} fontSize="12" fontWeight="700" textAnchor="middle" fontFamily="Inter,sans-serif" letterSpacing="0.1em">X</text>
-          {[
-            [9, 10, 12, 10],
-            [9, 10, 12, 10],
-            [9, 10, 12, 10],
-            [9, 10, 12, 10]
-          ].map((row, r) =>
-            row.map((val, c) => (
-              <text key={`x2-${r}-${c}`} x={110 + c * 40} y={120 + r * 45} fill={C_YELLOW} fillOpacity="0.8" fontSize="22" fontWeight="400" textAnchor="middle" fontFamily="Inter,sans-serif">{val}</text>
-            ))
-          )}
-          <path d="M 95 95 L 85 95 L 85 265 L 95 265" stroke={C_YELLOW} strokeOpacity="0.5" strokeWidth="1.5" fill="none" />
-          <path d="M 245 95 L 255 95 L 255 265 L 245 265" stroke={C_YELLOW} strokeOpacity="0.5" strokeWidth="1.5" fill="none" />
-
-          <text x={300} y={185} fill={C_PINK} fontSize="28" textAnchor="middle" fontFamily="Inter,sans-serif" fontWeight="300">×</text>
-
-          {/* Matrix C (4x3) */}
-          <text x={390} y={60} fill="#888" fontSize="12" fontWeight="700" textAnchor="middle" fontFamily="Inter,sans-serif" letterSpacing="0.1em">C</text>
-          {[
-            [2, 3, 1],
-            [2, 3, 2],
-            [3, 3, 2],
-            [3, 1, 2]
-          ].map((row, r) =>
-            row.map((val, c) => (
-              <text key={`c-${r}-${c}`} x={350 + c * 40} y={120 + r * 45} fill="#ddd" fontSize="22" fontWeight="300" textAnchor="middle" fontFamily="Inter,sans-serif">{val}</text>
-            ))
-          )}
-          <path d="M 335 95 L 325 95 L 325 265 L 335 265" stroke="#444" strokeWidth="1.5" fill="none" />
-          <path d="M 445 95 L 455 95 L 455 265 L 445 265" stroke="#444" strokeWidth="1.5" fill="none" />
-
-          <text x={500} y={185} fill={C_PINK} fontSize="28" textAnchor="middle" fontFamily="Inter,sans-serif" fontWeight="300">=</text>
-
-          {/* Matrix R (4x3) */}
-          <g className="anim-matrix-r">
-            <text x={615} y={60} fill={C_ORANGE} fontSize="12" fontWeight="700" textAnchor="middle" fontFamily="Inter,sans-serif" letterSpacing="0.1em">R</text>
-            {[
-              [104, 103, 73],
-              [104, 103, 73],
-              [104, 103, 73],
-              [104, 103, 73]
-            ].map((row, r) =>
-              row.map((val, c) => (
-                <text key={`r-${r}-${c}`} x={555 + c * 60} y={120 + r * 45} fill={C_ORANGE} fontSize="22" fontWeight="600" textAnchor="middle" fontFamily="Inter,sans-serif">{val}</text>
-              ))
-            )}
-            <path d="M 535 95 L 525 95 L 525 265 L 535 265" stroke={C_ORANGE} strokeOpacity="0.5" strokeWidth="1.5" fill="none" />
-            <path d="M 695 95 L 705 95 L 705 265 L 695 265" stroke={C_ORANGE} strokeOpacity="0.5" strokeWidth="1.5" fill="none" />
+          {/* Arrow 1 */}
+          <g className="arrow-1">
+            <line x1={230} y1={140} x2={310} y2={140} stroke="rgba(255,255,255,0.3)" strokeWidth="2" />
+            <polygon points="320,140 310,135 310,145" fill="rgba(255,255,255,0.3)" />
           </g>
 
-          <text x={400} y={330} fill="#666" fontSize="12" textAnchor="middle" fontFamily="Inter,sans-serif" letterSpacing="0.05em">
-            X(4×4) × C(4×3) = R(4×3)
+          {/* Box 2: Inventory Update */}
+          <g className="box-2">
+            <rect x={310} y={80} width={180} height={120} fill="rgba(168, 255, 62, 0.12)" rx="6" stroke="var(--accent-sage)" strokeWidth="2" />
+            <text x={400} y={110} fill="var(--accent-sage)" fontSize="14" fontWeight="700" textAnchor="middle" fontFamily="Inter,sans-serif">Stock Actualizado</text>
+            <text x={400} y={130} fill="rgba(255,255,255,0.5)" fontSize="11" textAnchor="middle" fontFamily="Inter,sans-serif">• Reducir cantidades</text>
+            <text x={400} y={145} fill="rgba(255,255,255,0.5)" fontSize="11" textAnchor="middle" fontFamily="Inter,sans-serif">• Por sucursal</text>
+            <text x={400} y={160} fill="rgba(255,255,255,0.5)" fontSize="11" textAnchor="middle" fontFamily="Inter,sans-serif">• En tiempo real</text>
+            <text x={400} y={180} fill="var(--accent-sage)" fontSize="10" fontWeight="600" textAnchor="middle" fontFamily="Inter,sans-serif">(Sync automático)</text>
+          </g>
+
+          {/* Arrow 2 */}
+          <g className="arrow-2">
+            <line x1={490} y1={140} x2={570} y2={140} stroke="rgba(255,255,255,0.3)" strokeWidth="2" />
+            <polygon points="580,140 570,135 570,145" fill="rgba(255,255,255,0.3)" />
+          </g>
+
+          {/* Box 3: Accounts Management */}
+          <g className="box-3">
+            <rect x={570} y={80} width={180} height={120} fill="rgba(255, 107, 107, 0.12)" rx="6" stroke="var(--accent-pink)" strokeWidth="2" />
+            <text x={660} y={110} fill="var(--accent-pink)" fontSize="14" fontWeight="700" textAnchor="middle" fontFamily="Inter,sans-serif">Cuentas Corrientes</text>
+            <text x={660} y={130} fill="rgba(255,255,255,0.5)" fontSize="11" textAnchor="middle" fontFamily="Inter,sans-serif">• Saldos de clientes</text>
+            <text x={660} y={145} fill="rgba(255,255,255,0.5)" fontSize="11" textAnchor="middle" fontFamily="Inter,sans-serif">• Límites de crédito</text>
+            <text x={660} y={160} fill="rgba(255,255,255,0.5)" fontSize="11" textAnchor="middle" fontFamily="Inter,sans-serif">• Registrar pagos</text>
+            <text x={660} y={180} fill="var(--accent-pink)" fontSize="10" fontWeight="600" textAnchor="middle" fontFamily="Inter,sans-serif">(CU04)</text>
+          </g>
+
+          {/* Bottom annotation */}
+          <text x={400} y={330} fill="rgba(255,255,255,0.4)" fontSize="11" textAnchor="middle" fontFamily="Inter,sans-serif" letterSpacing="0.05em">
+            El núcleo garantiza consistencia transaccional y actualización instantánea en todas las sucursales
           </text>
         </svg>
       </div>
       <div className="pp-step-lower">
         <div className="pp-step-body">
-          <p>Finalmente, multiplicamos la matriz X(4×4) por C(4×3). Esto nos arroja la matriz resultante R(4×3), que condensa el nivel de dominio y experiencia combinados de cada programador en relación con los lenguajes evaluados.</p>
+          <p>
+            El núcleo transaccional es el "motor del día a día". Opera en tres capas: registro de ventas con cargas concurrentes de productos, actualización automática e instantánea del stock por sucursal, y administración de cuentas corrientes con límites de crédito personalizados por cliente. Todo esto sincroniza en tiempo real sobre la base de datos central en Cloud.
+          </p>
         </div>
         <div className="pp-step-title-row">
-          <div className="pp-step-num-col"><span className="pp-step-num-circle">Paso 02</span></div>
-          <div className="pp-step-content"><h3 className="pp-step-heading">Segunda Multiplicación</h3></div>
+          <div className="pp-step-num-col"><span className="pp-step-num-circle">1</span></div>
+          <div className="pp-step-content"><h3 className="pp-step-heading">Operaciones Concurrentes</h3></div>
         </div>
       </div>
     </div>
 
-    {/* Step 3 */}
+    {/* Módulo 2 */}
     <div className="pp-step">
       <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative' }}>
-        <p className="pp-step-category">Análisis de Resultados</p>
+        <p className="pp-step-category">Módulo Analítico</p>
         <svg
           viewBox="0 0 800 380"
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
@@ -204,63 +122,57 @@ const resolution = (
         >
           <defs>
             <style>{`
-              @keyframes expandHeight { from { height: 0; opacity: 0; } to { height: 200px; opacity: 0.15; } }
-              .anim-col-1 { opacity: 0; animation: expandHeight 0.6s ease forwards 0.3s; }
-              .anim-col-2 { opacity: 0; animation: expandHeight 0.6s ease forwards 0.6s; }
+              @keyframes expandBar { from { height: 0; opacity: 0; } to { height: var(--bar-h); opacity: 1; } }
+              .bar-1 { opacity: 0; animation: expandBar 0.6s ease forwards 0.3s; --bar-h: 120px; }
+              .bar-2 { opacity: 0; animation: expandBar 0.6s ease forwards 0.5s; --bar-h: 160px; }
+              .bar-3 { opacity: 0; animation: expandBar 0.6s ease forwards 0.7s; --bar-h: 80px; }
             `}</style>
           </defs>
 
-          {/* Columns Highlight */}
-          <rect x={350} y={80} width={70} height={200} fill={C_ORANGE} rx="8" className="anim-col-1" />
-          <rect x={420} y={80} width={70} height={200} fill={C_SAGE} rx="8" className="anim-col-2" />
-          
-          <text x={385} y={65} fill={C_ORANGE} fontSize="12" fontWeight="700" textAnchor="middle" fontFamily="Inter,sans-serif">Java</text>
-          <text x={455} y={65} fill={C_SAGE} fontSize="12" fontWeight="700" textAnchor="middle" fontFamily="Inter,sans-serif">Python</text>
-          <text x={525} y={65} fill={C_BLUE} fontSize="12" fontWeight="700" textAnchor="middle" fontFamily="Inter,sans-serif">C++</text>
+          {/* Title */}
+          <text x={400} y={35} fill="rgba(255,255,255,0.7)" fontSize="13" fontWeight="700" textAnchor="middle" fontFamily="Inter,sans-serif" letterSpacing="0.1em">DASHBOARD DE MÉTRICAS EN TIEMPO REAL</text>
 
-          {/* Rows Labels */}
-          {["Prog 1", "Prog 2", "Prog 3", "Prog 4"].map((p, i) => (
-            <text key={p} x={300} y={115 + i * 50} fill="#888" fontSize="12" fontWeight="600" textAnchor="end" fontFamily="Inter,sans-serif">{p}</text>
-          ))}
+          {/* Dashboard bars */}
+          <g className="bar-1">
+            <rect x={120} y={200} width={80} height={120} fill="var(--accent-orange)" opacity="0.85" rx="4" />
+            <text x={160} y={240} fill="rgba(255,255,255,0.8)" fontSize="18" fontWeight="700" textAnchor="middle" fontFamily="Inter,sans-serif">$42.5k</text>
+            <text x={160} y={265} fill="rgba(255,255,255,0.5)" fontSize="10" textAnchor="middle" fontFamily="Inter,sans-serif">Ventas Hoy</text>
+          </g>
 
-          {/* Matrix R Values */}
-          {[
-            [104, 103, 73],
-            [104, 103, 73],
-            [104, 103, 73],
-            [104, 103, 73]
-          ].map((row, r) =>
-            row.map((val, c) => {
-              const colors = [C_ORANGE, C_SAGE, C_BLUE];
-              return (
-                <text key={`ra-${r}-${c}`} x={385 + c * 70} y={118 + r * 50} fill={colors[c]} fontSize="24" fontWeight={c < 2 ? "700" : "400"} fillOpacity={c < 2 ? 1 : 0.6} textAnchor="middle" fontFamily="Inter,sans-serif">{val}</text>
-              )
-            })
-          )}
+          <g className="bar-2">
+            <rect x={330} y={160} width={80} height={160} fill="var(--accent-sage)" opacity="0.85" rx="4" />
+            <text x={370} y={245} fill="rgba(255,255,255,0.8)" fontSize="18" fontWeight="700" textAnchor="middle" fontFamily="Inter,sans-serif">12k</text>
+            <text x={370} y={270} fill="rgba(255,255,255,0.5)" fontSize="10" textAnchor="middle" fontFamily="Inter,sans-serif">Stock Bajo</text>
+          </g>
 
-          <path d="M 335 85 L 325 85 L 325 275 L 335 275" stroke="#444" strokeWidth="1.5" fill="none" />
-          <path d="M 575 85 L 585 85 L 585 275 L 575 275" stroke="#444" strokeWidth="1.5" fill="none" />
+          <g className="bar-3">
+            <rect x={540} y={240} width={80} height={80} fill="var(--accent-pink)" opacity="0.85" rx="4" />
+            <text x={580} y={280} fill="rgba(255,255,255,0.8)" fontSize="18" fontWeight="700" textAnchor="middle" fontFamily="Inter,sans-serif">3</text>
+            <text x={580} y={305} fill="rgba(255,255,255,0.5)" fontSize="10" textAnchor="middle" fontFamily="Inter,sans-serif">Alertas</text>
+          </g>
 
-          <text x={400} y={330} fill="#888" fontSize="12" textAnchor="middle" fontFamily="Inter,sans-serif" letterSpacing="0.05em">
-            Sinergia óptima identificada entre <tspan fill={C_ORANGE} fontWeight="700">Java</tspan> y <tspan fill={C_SAGE} fontWeight="700">Python</tspan>
+          <text x={400} y={330} fill="rgba(255,255,255,0.4)" fontSize="11" textAnchor="middle" fontFamily="Inter,sans-serif" letterSpacing="0.05em">
+            Indicadores clave accesibles en tiempo real para la toma de decisiones inmediata
           </text>
         </svg>
       </div>
       <div className="pp-step-lower">
         <div className="pp-step-body">
-          <p>Teniendo en cuenta la matriz resultante, el equipo ejerce mayor dominio global sobre Java (columna 1) respecto a cada programador. La sinergia óptima se encuentra entre Java y Python, ya que todos manejan un dominio similar, lo que maximiza la productividad general.</p>
+          <p>
+            El módulo analítico es el "cerebro estratégico". Proporciona un dashboard con métricas actualizadas en tiempo real: ventas del día, estado del inventario por sucursal, cuentas morosas, y alertas de quiebre de stock. Los supervisores visualizan el estado operativo actual y pueden tomar decisiones sobre precios, promociones y reorden.
+          </p>
         </div>
         <div className="pp-step-title-row">
-          <div className="pp-step-num-col"><span className="pp-step-num-circle">Paso 03</span></div>
-          <div className="pp-step-content"><h3 className="pp-step-heading">Identificación de Sinergias</h3></div>
+          <div className="pp-step-num-col"><span className="pp-step-num-circle">2</span></div>
+          <div className="pp-step-content"><h3 className="pp-step-heading">Visualización Analítica</h3></div>
         </div>
       </div>
     </div>
 
-    {/* Step 4 */}
+    {/* Módulo 3 */}
     <div className="pp-step">
       <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative' }}>
-        <p className="pp-step-category">Asignación de Tareas</p>
+        <p className="pp-step-category">Simulador de Escenarios (What-If)</p>
         <svg
           viewBox="0 0 800 380"
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
@@ -268,71 +180,56 @@ const resolution = (
         >
           <defs>
             <style>{`
-              @keyframes drawEdge { from { stroke-dashoffset: 400; } to { stroke-dashoffset: 0; } }
-              .anim-edge { stroke-dasharray: 400; stroke-dashoffset: 400; animation: drawEdge 0.8s ease forwards; }
-              .delay-1 { animation-delay: 0.2s; }
-              .delay-2 { animation-delay: 0.4s; }
-              .delay-3 { animation-delay: 0.6s; }
-              .delay-4 { animation-delay: 0.8s; }
-              
-              @keyframes popNode { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-              .anim-node { opacity: 0; animation: popNode 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; transform-origin: 550px center; }
+              @keyframes slideInLeft { from { opacity: 0; transform: translateX(-20px); } to { opacity: 1; transform: translateX(0); } }
+              @keyframes slideInRight { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+              .scenario-left { opacity: 0; animation: slideInLeft 0.7s ease forwards 0.3s; }
+              .scenario-right { opacity: 0; animation: slideInRight 0.7s ease forwards 0.5s; }
             `}</style>
           </defs>
 
-          {/* Background edges (faint) */}
-          {[0,1,2,3].map(p => (
-            [0,1,2].map(l => (
-              <line key={`edge-${p}-${l}`} x1={250} y1={90 + p * 60} x2={550} y2={120 + l * 70} stroke="#222" strokeWidth="1" />
-            ))
-          ))}
-          
-          {/* Active Edges */}
-          {/* Prog 1 -> Python (l=1) */}
-          <line x1={250} y1={90} x2={550} y2={190} stroke={C_SAGE} strokeWidth="3" className="anim-edge delay-1" />
-          {/* Prog 2 -> Python (l=1) */}
-          <line x1={250} y1={150} x2={550} y2={190} stroke={C_SAGE} strokeWidth="3" className="anim-edge delay-2" />
-          {/* Prog 3 -> C++ (l=2) */}
-          <line x1={250} y1={210} x2={550} y2={260} stroke={C_BLUE} strokeWidth="3" className="anim-edge delay-3" />
-          {/* Prog 4 -> Java (l=0) */}
-          <line x1={250} y1={270} x2={550} y2={120} stroke={C_ORANGE} strokeWidth="3" className="anim-edge delay-4" />
+          {/* Title */}
+          <text x={400} y={35} fill="rgba(255,255,255,0.7)" fontSize="13" fontWeight="700" textAnchor="middle" fontFamily="Inter,sans-serif" letterSpacing="0.1em">ANÁLISIS WHAT-IF PARA ESCENARIOS FUTUROS</text>
 
-          {/* Programmer Nodes */}
-          {["Prog 1", "Prog 2", "Prog 3", "Prog 4"].map((p, i) => (
-            <g key={p}>
-              <circle cx={250} cy={90 + i * 60} r="18" fill="#111" stroke="#444" strokeWidth="2" />
-              <text x={220} y={94 + i * 60} fill="#ccc" fontSize="14" fontWeight="500" textAnchor="end" fontFamily="Inter,sans-serif">{p}</text>
-            </g>
-          ))}
+          {/* Scenario 1 */}
+          <g className="scenario-left">
+            <rect x={80} y={80} width={240} height={200} fill="rgba(233, 93, 53, 0.08)" rx="6" stroke="var(--accent-orange)" strokeWidth="2" />
+            <text x={200} y={110} fill="var(--accent-orange)" fontSize="13" fontWeight="700" textAnchor="middle" fontFamily="Inter,sans-serif">Escenario A</text>
+            <text x={200} y={130} fill="rgba(255,255,255,0.6)" fontSize="10" textAnchor="middle" fontFamily="Inter,sans-serif">+15% demanda</text>
+            <text x={200} y={148} fill="rgba(255,255,255,0.5)" fontSize="9" textAnchor="middle" fontFamily="Inter,sans-serif">• Precio: sin cambio</text>
+            <text x={200} y={163} fill="rgba(255,255,255,0.5)" fontSize="9" textAnchor="middle" fontFamily="Inter,sans-serif">• Costo: +8% inflación</text>
+            <text x={200} y={178} fill="rgba(255,255,255,0.5)" fontSize="9" textAnchor="middle" fontFamily="Inter,sans-serif" />
+            <rect x={100} y={200} width={200} height="2" fill="var(--accent-orange)" opacity="0.3" />
+            <text x={200} y={230} fill="var(--accent-orange)" fontSize="16" fontWeight="700" textAnchor="middle" fontFamily="Inter,sans-serif">Rentabilidad: -2.3%</text>
+            <text x={200} y={250} fill="rgba(255,255,255,0.4)" fontSize="9" textAnchor="middle" fontFamily="Inter,sans-serif">Requiere ajuste de precios</text>
+          </g>
 
-          {/* Language Nodes */}
-          {[
-            { l: "Java", c: C_ORANGE, delay: "delay-4", cy: 120 },
-            { l: "Python", c: C_SAGE, delay: "delay-1", cy: 190 },
-            { l: "C++", c: C_BLUE, delay: "delay-3", cy: 260 }
-          ].map((lang) => (
-            <g key={lang.l} className={`anim-node ${lang.delay}`} style={{ transformOrigin: `550px ${lang.cy}px` }}>
-              <circle cx={550} cy={lang.cy} r="18" fill={lang.c} />
-              <text x={580} y={lang.cy + 4} fill="#fff" fontSize="14" fontWeight="600" textAnchor="start" fontFamily="Inter,sans-serif">{lang.l}</text>
-            </g>
-          ))}
+          {/* Scenario 2 */}
+          <g className="scenario-right">
+            <rect x={480} y={80} width={240} height={200} fill="rgba(168, 255, 62, 0.08)" rx="6" stroke="var(--accent-sage)" strokeWidth="2" />
+            <text x={600} y={110} fill="var(--accent-sage)" fontSize="13" fontWeight="700" textAnchor="middle" fontFamily="Inter,sans-serif">Escenario B</text>
+            <text x={600} y={130} fill="rgba(255,255,255,0.6)" fontSize="10" textAnchor="middle" fontFamily="Inter,sans-serif">+15% demanda + 10% precio</text>
+            <text x={600} y={148} fill="rgba(255,255,255,0.5)" fontSize="9" textAnchor="middle" fontFamily="Inter,sans-serif">• Precio: +10%</text>
+            <text x={600} y={163} fill="rgba(255,255,255,0.5)" fontSize="9" textAnchor="middle" fontFamily="Inter,sans-serif">• Costo: +8% inflación</text>
+            <text x={600} y={178} fill="rgba(255,255,255,0.5)" fontSize="9" textAnchor="middle" fontFamily="Inter,sans-serif" />
+            <rect x={500} y={200} width={200} height="2" fill="var(--accent-sage)" opacity="0.3" />
+            <text x={600} y={230} fill="var(--accent-sage)" fontSize="16" fontWeight="700" textAnchor="middle" fontFamily="Inter,sans-serif">Rentabilidad: +9.7%</text>
+            <text x={600} y={250} fill="rgba(255,255,255,0.4)" fontSize="9" textAnchor="middle" fontFamily="Inter,sans-serif">Riesgo: sensibilidad de demanda</text>
+          </g>
 
-          {/* Annotations */}
-          <text x={250} y={50} fill="#888" fontSize="12" fontWeight="700" textAnchor="middle" fontFamily="Inter,sans-serif" letterSpacing="0.1em">PROGRAMADORES</text>
-          <text x={550} y={50} fill="#888" fontSize="12" fontWeight="700" textAnchor="middle" fontFamily="Inter,sans-serif" letterSpacing="0.1em">LENGUAJES</text>
-
-          <text x={400} y={350} fill="#666" fontSize="11" textAnchor="middle" fontFamily="Inter,sans-serif" letterSpacing="0.02em">
-            Prog 1 (Py, 4y) · Prog 2 (Py, 5y, Lead) · Prog 3 (C++, 4y) · Prog 4 (Java, 6y)
+          <text x={400} y={330} fill="rgba(255,255,255,0.4)" fontSize="11" textAnchor="middle" fontFamily="Inter,sans-serif" letterSpacing="0.05em">
+            La gerencia simula impactos financieros antes de implementar cambios operativos
           </text>
         </svg>
       </div>
       <div className="pp-step-lower">
         <div className="pp-step-body">
-          <p>En base a nivel de dominio y experiencia: Programador 1 (4 años, dominio alto) y Programador 2 (5 años, cargo mayor) a Python. Programador 3 a C++ (4 años de experiencia). Programador 4 (6 años, dominio alto) dedicado a Java. Esto se grafica en un grafo bipartito.</p>
+          <p>
+            El simulador de escenarios permite a la gerencia explorar "¿qué pasaría si...?" antes de tomar decisiones críticas. Pueden alterar variables como demanda estimada, lista de precios, costos de proveedores, y visualizar el impacto proyectado en rentabilidad. Esto transforma la toma de decisiones de reaccionaria a anticipatoria.
+          </p>
         </div>
         <div className="pp-step-title-row">
-          <div className="pp-step-num-col"><span className="pp-step-num-circle">Paso 04</span></div>
-          <div className="pp-step-content"><h3 className="pp-step-heading">Grafo Bipartito</h3></div>
+          <div className="pp-step-num-col"><span className="pp-step-num-circle">3</span></div>
+          <div className="pp-step-content"><h3 className="pp-step-heading">Simulación Estratégica</h3></div>
         </div>
       </div>
     </div>
@@ -343,10 +240,10 @@ export default function Problem1() {
   return (
     <ProblemPage
       number="01"
-      subject="Álgebra Lineal"
-      title="Matrices"
-      question="¿Cómo podemos optimizar el rendimiento de un equipo de desarrollo de software utilizando matrices?"
-      heroBackground="var(--color-charcoal)"
+      subject="Introducción"
+      title="Visión General del Sistema"
+      question="¿Cómo integrar operaciones del día a día con análisis estratégico en un único sistema de gestión?"
+      heroBackground="#0B0B0B"
       accent={ACCENT}
       theoryItems={theoryItems}
       approach={approach}
@@ -354,3 +251,4 @@ export default function Problem1() {
     />
   )
 }
+ 

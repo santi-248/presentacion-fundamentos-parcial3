@@ -6,7 +6,6 @@ import Problem2 from './pages/Problem2'
 import Problem3 from './pages/Problem3'
 import Problem4 from './pages/Problem4'
 import Problem5 from './pages/Problem5'
-import Problem6 from './pages/Problem6'
 
 export default function App() {
   return (
@@ -19,7 +18,6 @@ export default function App() {
           <Route path="/problema/3" element={<Problem3 />} />
           <Route path="/problema/4" element={<Problem4 />} />
           <Route path="/problema/5" element={<Problem5 />} />
-          <Route path="/problema/6" element={<Problem6 />} />
         </Route>
       </Routes>
     </BrowserRouter>

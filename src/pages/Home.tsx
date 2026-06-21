@@ -5,51 +5,43 @@ import DotGrid from '../components/DotGrid/DotGrid'
 const problems = [
   {
     number: '01',
-    title: 'Matrices',
-    description: 'Operaciones matriciales, multiplicación animada y representación algebraica.',
+    title: 'Visión General',
+    description: 'Descripción integral del sistema, objetivos empresariales y alcance del proyecto de inventario.',
     path: '/problema/1',
     accent: 'var(--accent-orange)',
-    tag: 'Álgebra Lineal',
+    tag: 'Introducción',
   },
   {
     number: '02',
-    title: 'Estadística y Probabilidad',
-    description: 'Distribuciones de frecuencia, histogramas, boxplots y medidas de tendencia central.',
+    title: 'Alcances y Límites',
+    description: 'Módulos centrales, funcionalidades cubiertas y limitaciones deliberadas del sistema.',
     path: '/problema/2',
     accent: 'var(--accent-pink)',
-    tag: 'Estadística',
+    tag: 'Scope',
   },
   {
     number: '03',
-    title: 'Ocho Reinas',
-    description: 'Visualización del algoritmo de backtracking con tablero interactivo.',
+    title: 'Actores y Casos de Uso',
+    description: 'Modelado UML de usuarios (Vendedor, Supervisor, Gerente) y 8 casos de uso críticos.',
     path: '/problema/3',
     accent: 'var(--accent-sage)',
-    tag: 'Lógica Computacional',
+    tag: 'UML',
   },
   {
     number: '04',
-    title: 'Grafos',
-    description: 'Búsqueda en profundidad, recorridos DFS y exploración de árboles de estado.',
+    title: 'Arquitectura del Sistema',
+    description: 'Stack tecnológico (React/Python/PostgreSQL), diseño OOP con 10 clases centrales.',
     path: '/problema/4',
     accent: 'var(--accent-yellow)',
-    tag: 'Teoría de Grafos',
+    tag: 'Arquitectura',
   },
   {
     number: '05',
-    title: 'Transformaciones Geométricas',
-    description: 'Traslación, rotación y escala en 2D y 3D con visualización interactiva.',
+    title: 'Pruebas e Implementación',
+    description: 'Estrategia de testing unitario e integración, despliegue piloto en Sucursal 2.',
     path: '/problema/5',
-    accent: 'var(--accent-pink)',
-    tag: 'Geometría',
-  },
-  {
-    number: '06',
-    title: 'Números Complejos',
-    description: 'Plano complejo, fórmula de Euler y trayectorias paramétricas animadas.',
-    path: '/problema/6',
-    accent: 'var(--accent-orange)',
-    tag: 'Análisis Complejo',
+    accent: 'var(--accent-blue)',
+    tag: 'DevOps',
   },
 ]
 
@@ -93,7 +85,7 @@ export default function Home() {
               userSelect: 'none',
             }}
           >
-            EGI 2026
+            PARCIAL MÓDULO 3
           </div>
         </motion.div>
 
@@ -121,10 +113,9 @@ export default function Home() {
                   color: 'var(--color-ink)',
                   letterSpacing: '-0.04em',
                   margin: 0,
-                  textTransform: 'lowercase',
                 }}
               >
-                álgebra, estadística y lógica matemática
+                FARO - Control de Inventario y Proyección
               </h1>
             </motion.div>
 
@@ -162,7 +153,7 @@ export default function Home() {
                   maxWidth: '38ch',
                 }}
               >
-                Esta presentación reúne seis problemas que abordan los temas vistos en clase. Elegimos trabajarlos bajo un enfoque particular: desarrollar una estrategia de resolución, formular sus modelos matemáticos, y analizar los resultados obtenidos interpretándolos desde la informática.
+                Sistema integral para registrar ventas, gestionar inventario y visualizar métricas críticas del negocio. Incluye motor de predicciones de stock y simulador de escenarios empresariales para la toma de decisiones estratégica.
               </p>
 
               <div style={{ width: '100%' }}>
@@ -371,7 +362,7 @@ export default function Home() {
                           color: 'var(--color-ink)',
                         }}
                       >
-                        PROBLEMA
+                        SECCIÓN
                       </span>
                     </div>
                   </div>
