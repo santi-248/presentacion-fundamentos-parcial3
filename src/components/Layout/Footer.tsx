@@ -12,13 +12,13 @@ export default function Footer() {
               Sistema de Control de Inventario y Proyección de Negocio - "Faro"
             </p>
             <p className="text-caption" style={{ marginTop: '0.25rem' }}>
-              Grupo: Santis y Los Otros - Apoud, Figueroa, Marsala, Mir, Rojas
+              Grupo: Santis y Los Otros
             </p>
           </div>
           <div className="col-6" style={{ textAlign: 'right' }}>
             <p className="text-caption">ITU - DS - Fundamentos de Análisis de Sistemas</p>
             <p className="text-caption" style={{ marginTop: '0.25rem', color: 'var(--accent-orange)' }}>
-              Frontend: React • Backend: Python • DB: PostgreSQL/MySQL
+              Apoud, Figueroa, Marsala, Mir, Rojas
             </p>
           </div>
         </div>
