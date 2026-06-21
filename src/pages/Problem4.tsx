@@ -4,9 +4,9 @@ const ACCENT = 'var(--accent-yellow)'
 const C_YELLOW = 'var(--accent-yellow)'
 
 const theoryItems = [
-  'React + TypeScript',
+  'HTML + JS Asíncrono',
   'Python + FastAPI',
-  'PostgreSQL / MySQL',
+  'SQLite Relacional',
   'Arquitectura n-capas',
   'Clases de Dominio',
 ]
@@ -14,7 +14,7 @@ const theoryItems = [
 const approach = (
   <>
     <p>
-      La arquitectura sigue el patrón <strong>n-capas</strong> con separación clara de responsabilidades. En el <strong>frontend</strong>, React + TypeScript + Tailwind CSS proporciona interfaz responsiva y componentes reutilizables. El <strong>backend</strong> usa Python + FastAPI para APIs REST ligeras y rápidas, con validación automática de datos. La <strong>persistencia</strong> emplea PostgreSQL (recomendado) o MySQL, garantizando transacciones ACID y relaciones bien definidas.
+      Para garantizar la escalabilidad y un rendimiento óptimo, el sistema FARO se fundamenta en una arquitectura desacoplada estructurada en capas:
     </p>
     <p>
       El dominio del negocio está representado por <strong>10 clases de negocio</strong> que modelan entidades del mundo real (Producto, Stock, Venta, Cliente, Usuario, etc.). Cada clase encapsula lógica de validación y comportamiento específico, permitiendo evolucionar la solución sin cambios abruptos en la interfaz.
@@ -52,9 +52,9 @@ const resolution = (
             padding: '1.2rem',
             textAlign: 'center'
           }}>
-            <p style={{ color: C_YELLOW, fontWeight: 'bold', fontSize: '1.15em', marginBottom: '0.5rem', fontFamily: 'Inter, sans-serif' }}>🖥️ Frontend (Presentación)</p>
-            <p style={{ fontFamily: 'monospace', fontSize: '0.95em', color: '#fff' }}>React 18 + TypeScript + Tailwind CSS</p>
-            <p style={{ fontSize: '0.85em', color: 'rgba(255,255,255,0.7)', marginTop: '0.5rem', fontFamily: 'Inter, sans-serif' }}>SPA responsiva, componentes reutilizables, manejo de estado con React Router</p>
+            <p style={{ color: C_YELLOW, fontWeight: 'bold', fontSize: '1.15em', marginBottom: '0.5rem', fontFamily: 'Inter, sans-serif' }}>🖥️ Capa de Presentación (Frontend Dinámico)</p>
+            <p style={{ fontFamily: 'monospace', fontSize: '0.95em', color: '#fff' }}>HTML puro + JavaScript (AJAX / Fetch API)</p>
+            <p style={{ fontSize: '0.85em', color: 'rgba(255,255,255,0.7)', marginTop: '0.5rem', fontFamily: 'Inter, sans-serif' }}>La interfaz visual está desarrollada con archivos HTML puros y JavaScript Asíncrono (AJAX / Fetch API). Esto permite que el navegador dibuje la información y reaccione a los eventos del usuario (como registrar una venta) comunicándose en segundo plano con el servidor, sin necesidad de recargar la página completa.</p>
           </div>
 
           <div style={{
@@ -64,9 +64,9 @@ const resolution = (
             padding: '1.2rem',
             textAlign: 'center'
           }}>
-            <p style={{ color: C_YELLOW, fontWeight: 'bold', fontSize: '1.15em', marginBottom: '0.5rem', fontFamily: 'Inter, sans-serif' }}>⚙️ Backend (Negocio)</p>
-            <p style={{ fontFamily: 'monospace', fontSize: '0.95em', color: '#fff' }}>Python + FastAPI + SQLAlchemy ORM</p>
-            <p style={{ fontSize: '0.85em', color: 'rgba(255,255,255,0.7)', marginTop: '0.5rem', fontFamily: 'Inter, sans-serif' }}>APIs REST, validación automática, autenticación JWT, manejo de transacciones</p>
+            <p style={{ color: C_YELLOW, fontWeight: 'bold', fontSize: '1.15em', marginBottom: '0.5rem', fontFamily: 'Inter, sans-serif' }}>⚙️ Capa de Enrutamiento y Lógica (Backend)</p>
+            <p style={{ fontFamily: 'monospace', fontSize: '0.95em', color: '#fff' }}>Python + FastAPI</p>
+            <p style={{ fontSize: '0.85em', color: 'rgba(255,255,255,0.7)', marginTop: '0.5rem', fontFamily: 'Inter, sans-serif' }}>El servidor principal está construido en Python utilizando el framework FastAPI. Funciona como el 'recepcionista' del sistema: recibe las peticiones, valida estrictamente los formatos y deriva el procesamiento matemático a los servicios internos. Además, implementa un sistema de Transacciones Atómicas que garantiza que, si ocurre un error, no se descuente el stock del inventario de forma errónea.</p>
           </div>
 
           <div style={{
@@ -76,9 +76,9 @@ const resolution = (
             padding: '1.2rem',
             textAlign: 'center'
           }}>
-            <p style={{ color: C_YELLOW, fontWeight: 'bold', fontSize: '1.15em', marginBottom: '0.5rem', fontFamily: 'Inter, sans-serif' }}>🗄️ Base de Datos (Persistencia)</p>
-            <p style={{ fontFamily: 'monospace', fontSize: '0.95em', color: '#fff' }}>PostgreSQL (primary) / MySQL (alternative)</p>
-            <p style={{ fontSize: '0.85em', color: 'rgba(255,255,255,0.7)', marginTop: '0.5rem', fontFamily: 'Inter, sans-serif' }}>Transacciones ACID, índices de rendimiento, backups automáticos</p>
+            <p style={{ color: C_YELLOW, fontWeight: 'bold', fontSize: '1.15em', marginBottom: '0.5rem', fontFamily: 'Inter, sans-serif' }}>🗄️ Capa de Persistencia de Datos</p>
+            <p style={{ fontFamily: 'monospace', fontSize: '0.95em', color: '#fff' }}>SQLite Relacional</p>
+            <p style={{ fontSize: '0.85em', color: 'rgba(255,255,255,0.7)', marginTop: '0.5rem', fontFamily: 'Inter, sans-serif' }}>Se utiliza una base de datos relacional altamente normalizada en SQLite. Esta funciona como la 'fuente de la verdad absoluta', utilizando historiales inmutables y eliminación en cascada para mantener la integridad de las cuentas corrientes y los inventarios.</p>
           </div>
         </div>
       </div>
