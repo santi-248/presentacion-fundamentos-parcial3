@@ -39,7 +39,7 @@ const resolution = (
         PASO 01 — ACTORES
         ════════════════════════════════════════════════════════ */}
     <div className="pp-step">
-      <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '1', justifyContent: 'center', alignItems: 'center' }}>
+      <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflowY: 'auto', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 82%', justifyContent: 'center', alignItems: 'center' }}>
         <p className="pp-step-category">Modelo de Actores</p>
 
         <div style={{ maxWidth: '1000px', width: '100%' }}>
@@ -108,20 +108,20 @@ const resolution = (
         PASO 02 — CASOS DE USO (USE CASES)
         ════════════════════════════════════════════════════════ */}
     <div className="pp-step">
-      <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '1', justifyContent: 'center', alignItems: 'center' }}>
+      <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflowY: 'auto', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 82%', justifyContent: 'center', alignItems: 'center' }}>
         <p className="pp-step-category">Especificación Funcional</p>
 
         <div style={{ maxWidth: '800px', width: '100%' }}>
-          <div className="responsive-grid-1" style={{ marginTop: '0', fontFamily: 'Inter, sans-serif', display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
+          <div className="responsive-grid-1" style={{ marginTop: '0', fontFamily: 'Inter, sans-serif', display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
 
             <div style={{
               background: 'rgba(131, 221, 156, 0.05)',
               border: `1px solid ${C_SAGE}`,
               borderRadius: '8px',
-              padding: '1.5rem'
+              padding: '1.2rem'
             }}>
-              <p style={{ fontWeight: 'bold', color: C_SAGE, marginBottom: '1rem', fontSize: '1.1em' }}>Actor: Vendedor, quien atiende el mostrador</p>
-              <ul style={{ fontSize: '0.95em', color: 'rgba(255,255,255,0.8)', margin: 0, paddingLeft: '1.5rem', lineHeight: '1.7' }}>
+              <p style={{ fontWeight: 'bold', color: C_SAGE, marginBottom: '0.6rem', fontSize: '1.1em' }}>Actor: Vendedor, quien atiende el mostrador</p>
+              <ul style={{ fontSize: '0.95em', color: 'rgba(255,255,255,0.8)', margin: 0, paddingLeft: '1.5rem', lineHeight: '1.5' }}>
                 <li><strong style={{ color: '#fff' }}>CU01 - Registrar Venta:</strong> Carga productos y asienta transacciones concurrentes.</li>
                 <li><strong style={{ color: '#fff' }}>CU02 - Emitir Facturación:</strong> Genera el comprobante de la compra.</li>
                 <li><strong style={{ color: '#fff' }}>CU03 - Buscar Producto:</strong> Localiza ítems en segundos usando múltiples filtros combinados.</li>
@@ -132,10 +132,10 @@ const resolution = (
               background: 'rgba(131, 221, 156, 0.05)',
               border: `1px solid ${C_SAGE}`,
               borderRadius: '8px',
-              padding: '1.5rem'
+              padding: '1.2rem'
             }}>
-              <p style={{ fontWeight: 'bold', color: C_SAGE, marginBottom: '1rem', fontSize: '1.1em' }}>Actor: Supervisor, quien gestiona la operativa local</p>
-              <ul style={{ fontSize: '0.95em', color: 'rgba(255,255,255,0.8)', margin: 0, paddingLeft: '1.5rem', lineHeight: '1.7' }}>
+              <p style={{ fontWeight: 'bold', color: C_SAGE, marginBottom: '0.6rem', fontSize: '1.1em' }}>Actor: Supervisor, quien gestiona la operativa local</p>
+              <ul style={{ fontSize: '0.95em', color: 'rgba(255,255,255,0.8)', margin: 0, paddingLeft: '1.5rem', lineHeight: '1.5' }}>
                 <li><strong style={{ color: '#fff' }}>CU04 - Administrar Cuenta Corriente:</strong> Gestiona límites de crédito y pagos.</li>
                 <li><strong style={{ color: '#fff' }}>CU05 - Actualizar Precios Globales:</strong> Ajusta costos por inflación de manera masiva.</li>
                 <li><strong style={{ color: '#fff' }}>CU06 - Consultar Alertas:</strong> Visualiza notificaciones de quiebre de stock o límites excedidos.</li>
@@ -146,10 +146,10 @@ const resolution = (
               background: 'rgba(131, 221, 156, 0.05)',
               border: `1px solid ${C_SAGE}`,
               borderRadius: '8px',
-              padding: '1.5rem'
+              padding: '1.2rem'
             }}>
-              <p style={{ fontWeight: 'bold', color: C_SAGE, marginBottom: '1rem', fontSize: '1.1em' }}>Actor: Gerente General, quien toma decisiones de alto nivel</p>
-              <ul style={{ fontSize: '0.95em', color: 'rgba(255,255,255,0.8)', margin: 0, paddingLeft: '1.5rem', lineHeight: '1.7' }}>
+              <p style={{ fontWeight: 'bold', color: C_SAGE, marginBottom: '0.6rem', fontSize: '1.1em' }}>Actor: Gerente General, quien toma decisiones de alto nivel</p>
+              <ul style={{ fontSize: '0.95em', color: 'rgba(255,255,255,0.8)', margin: 0, paddingLeft: '1.5rem', lineHeight: '1.5' }}>
                 <li><strong style={{ color: '#fff' }}>CU07 - Proyectar Quiebre de Stock:</strong> Calcula la fecha en que se acabará un producto.</li>
                 <li><strong style={{ color: '#fff' }}>CU08 - Simular Escenarios (What-If):</strong> Altera variables de precio/costos para proyectar la rentabilidad.</li>
               </ul>
@@ -175,7 +175,7 @@ const resolution = (
         PASO 03 — MATRIZ DE RESPONSABILIDADES
         ════════════════════════════════════════════════════════ */}
     <div className="pp-step">
-      <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '1', justifyContent: 'center', alignItems: 'center' }}>
+      <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflowY: 'auto', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 82%', justifyContent: 'center', alignItems: 'center' }}>
         <p className="pp-step-category">Mapping de Actores y Funciones</p>
 
         <div style={{ maxWidth: '900px', width: '100%' }}>

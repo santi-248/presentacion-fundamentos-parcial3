@@ -21,7 +21,7 @@ const resolution = (
         PASO 01 — NÚCLEO TRANSACCIONAL
         ════════════════════════════════════════════════════════ */}
     <div className="pp-step">
-      <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '1', justifyContent: 'center', alignItems: 'center' }}>
+      <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflowY: 'auto', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 82%', justifyContent: 'center', alignItems: 'center' }}>
         <p className="pp-step-category">Módulo 1: Operaciones Centrales</p>
         
         <div style={{ maxWidth: '800px', width: '100%' }}>
@@ -63,7 +63,7 @@ const resolution = (
         PASO 02 — MÓDULO ANALÍTICO
         ════════════════════════════════════════════════════════ */}
     <div className="pp-step">
-      <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '1', justifyContent: 'center', alignItems: 'center' }}>
+      <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflowY: 'auto', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 82%', justifyContent: 'center', alignItems: 'center' }}>
         <p className="pp-step-category">Módulo 2: Inteligencia Empresarial</p>
         
         <div style={{ maxWidth: '800px', width: '100%' }}>
@@ -105,7 +105,7 @@ const resolution = (
         PASO 03 — LIMITACIONES DELIBERADAS
         ════════════════════════════════════════════════════════ */}
     <div className="pp-step">
-      <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '1', justifyContent: 'center', alignItems: 'center' }}>
+      <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflowY: 'auto', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 82%', justifyContent: 'center', alignItems: 'center' }}>
         <p className="pp-step-category">Definición de Alcances</p>
         
         <div style={{ maxWidth: '900px', width: '100%' }}>
