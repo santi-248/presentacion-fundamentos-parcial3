@@ -248,13 +248,13 @@ const resolution = (
           lineHeight: '2',
           color: 'rgba(255,255,255,0.8)'
         }}>
-          <p><span style={{ color: C_YELLOW }}>1.</span> Usuario (Vendedor) ingresa datos en React → Valida formato</p>
+          <p><span style={{ color: C_YELLOW }}>1.</span> Usuario (Vendedor) ingresa datos en JavaScript → Valida formato</p>
           <p><span style={{ color: C_YELLOW }}>2.</span> POST /api/ventas → FastAPI recibe JSON con cliente_id, productos[]</p>
           <p><span style={{ color: C_YELLOW }}>3.</span> Backend valida reglas de negocio (stock suficiente, cliente válido)</p>
           <p><span style={{ color: C_YELLOW }}>4.</span> La capa de servicios ejecuta sentencias SQL transaccionales puras directamente sobre SQLite</p>
           <p><span style={{ color: C_YELLOW }}>5.</span> BD responde con transacción confirmada (COMMIT ACID)</p>
           <p><span style={{ color: C_YELLOW }}>6.</span> FastAPI retorna 201 Created + venta_id al frontend</p>
-          <p><span style={{ color: C_YELLOW }}>7.</span> React actualiza dashboard y muestra confirmación al usuario ✓</p>
+          <p><span style={{ color: C_YELLOW }}>7.</span> JavaScript actualiza dashboard y muestra confirmación al usuario ✓</p>
         </div>
 
       </div>
