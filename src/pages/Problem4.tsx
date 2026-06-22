@@ -44,7 +44,7 @@ const resolution = (
         PASO 01 — ARQUITECTURA DE CAPAS
         ════════════════════════════════════════════════════════ */}
     <div className="pp-step">
-      <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 75%' }}>
+      <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflowY: 'auto', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 72%', justifyContent: 'center', alignItems: 'center' }}>
         <p className="pp-step-category">Stack Tecnológico</p>
         
         <div className="responsive-grid-1" style={{ marginTop: '1.5rem' }}>
@@ -99,10 +99,45 @@ const resolution = (
     </div>
 
     {/* ════════════════════════════════════════════════════════
-        PASO 02 — MODELO DE CLASES DE DOMINIO (PARTE 1)
+        PASO 02 — LA CUARTA CAPA (MACHINE LEARNING)
         ════════════════════════════════════════════════════════ */}
     <div className="pp-step">
-      <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 75%' }}>
+      <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflowY: 'auto', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 72%', justifyContent: 'center', alignItems: 'center' }}>
+        <p className="pp-step-category">La Capa de Inteligencia (Machine Learning)</p>
+        
+        <div style={{ maxWidth: '800px', width: '100%', marginTop: '1.5rem' }}>
+          <div style={{
+            background: 'rgba(255, 193, 7, 0.1)',
+            border: `2px solid ${C_YELLOW}`,
+            borderRadius: '8px',
+            padding: '2rem',
+            textAlign: 'center'
+          }}>
+            <p style={{ color: C_YELLOW, fontWeight: 'bold', fontSize: '1.3em', marginBottom: '1rem', fontFamily: 'Inter, sans-serif' }}>🧠 Bibliotecas Científicas</p>
+            <p style={{ fontSize: '1.1em', color: 'rgba(255,255,255,0.85)', lineHeight: '1.6', fontFamily: 'Inter, sans-serif' }}>
+              Integramos bibliotecas como <strong>scikit-learn</strong> y <strong>pandas</strong> para tomar el historial de ventas de la base de datos y generar simulaciones de escenarios y proyecciones de demanda.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="pp-step-lower">
+        <div className="pp-step-body">
+          <p>
+            Al añadir una cuarta capa de inteligencia artificial, el sistema pasa de ser reactivo a proactivo.
+          </p>
+        </div>
+        <div className="pp-step-title-row">
+          <div className="pp-step-num-col"><span className="pp-step-num-circle">2</span></div>
+          <div className="pp-step-content"><h3 className="pp-step-heading">La Cuarta Capa</h3></div>
+        </div>
+      </div>
+    </div>
+
+    {/* ════════════════════════════════════════════════════════
+        PASO 03 — MODELO DE CLASES DE DOMINIO (PARTE 1)
+        ════════════════════════════════════════════════════════ */}
+    <div className="pp-step">
+      <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflowY: 'auto', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 72%', justifyContent: 'center', alignItems: 'center' }}>
         <p className="pp-step-category">Entidades del Negocio</p>
         
         <div className="responsive-grid-2" style={{ marginTop: '1rem' }}>
@@ -132,17 +167,17 @@ const resolution = (
           </p>
         </div>
         <div className="pp-step-title-row">
-          <div className="pp-step-num-col"><span className="pp-step-num-circle">2</span></div>
+          <div className="pp-step-num-col"><span className="pp-step-num-circle">3</span></div>
           <div className="pp-step-content"><h3 className="pp-step-heading">10 Clases de Dominio (OOP)</h3></div>
         </div>
       </div>
     </div>
 
     {/* ════════════════════════════════════════════════════════
-        PASO 03 — MODELO DE CLASES DE DOMINIO (PARTE 2)
+        PASO 04 — MODELO DE CLASES DE DOMINIO (PARTE 2)
         ════════════════════════════════════════════════════════ */}
     <div className="pp-step">
-      <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 75%' }}>
+      <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflowY: 'auto', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 72%', justifyContent: 'center', alignItems: 'center' }}>
         <p className="pp-step-category">Entidades del Negocio</p>
         
         <div className="responsive-grid-2" style={{ marginTop: '1rem' }}>
@@ -189,17 +224,17 @@ const resolution = (
           </p>
         </div>
         <div className="pp-step-title-row">
-          <div className="pp-step-num-col"><span className="pp-step-num-circle">3</span></div>
+          <div className="pp-step-num-col"><span className="pp-step-num-circle">4</span></div>
           <div className="pp-step-content"><h3 className="pp-step-heading">10 Clases de Dominio (OOP)</h3></div>
         </div>
       </div>
     </div>
 
     {/* ════════════════════════════════════════════════════════
-        PASO 04 — FLUJO DE DATOS
+        PASO 05 — FLUJO DE DATOS
         ════════════════════════════════════════════════════════ */}
     <div className="pp-step">
-      <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 75%' }}>
+      <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflowY: 'auto', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 72%', justifyContent: 'center', alignItems: 'center' }}>
         <p className="pp-step-category">Integración de Capas</p>
         
         <div style={{
@@ -216,7 +251,7 @@ const resolution = (
           <p><span style={{ color: C_YELLOW }}>1.</span> Usuario (Vendedor) ingresa datos en React → Valida formato</p>
           <p><span style={{ color: C_YELLOW }}>2.</span> POST /api/ventas → FastAPI recibe JSON con cliente_id, productos[]</p>
           <p><span style={{ color: C_YELLOW }}>3.</span> Backend valida reglas de negocio (stock suficiente, cliente válido)</p>
-          <p><span style={{ color: C_YELLOW }}>4.</span> ORM SQLAlchemy ejecuta transacción en BD (INSERT venta + INSERT detalles + UPDATE stock)</p>
+          <p><span style={{ color: C_YELLOW }}>4.</span> La capa de servicios ejecuta sentencias SQL transaccionales puras directamente sobre SQLite</p>
           <p><span style={{ color: C_YELLOW }}>5.</span> BD responde con transacción confirmada (COMMIT ACID)</p>
           <p><span style={{ color: C_YELLOW }}>6.</span> FastAPI retorna 201 Created + venta_id al frontend</p>
           <p><span style={{ color: C_YELLOW }}>7.</span> React actualiza dashboard y muestra confirmación al usuario ✓</p>
@@ -230,7 +265,7 @@ const resolution = (
           </p>
         </div>
         <div className="pp-step-title-row">
-          <div className="pp-step-num-col"><span className="pp-step-num-circle">4</span></div>
+          <div className="pp-step-num-col"><span className="pp-step-num-circle">5</span></div>
           <div className="pp-step-content"><h3 className="pp-step-heading">Flujo de una Transacción</h3></div>
         </div>
       </div>
