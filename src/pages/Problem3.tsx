@@ -39,7 +39,7 @@ const resolution = (
         PASO 01 — ACTORES
         ════════════════════════════════════════════════════════ */}
     <div className="pp-step">
-      <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflowY: 'auto', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 82%', justifyContent: 'center', alignItems: 'center' }}>
+      <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflowY: 'auto', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 72%', justifyContent: 'center', alignItems: 'center' }}>
         <p className="pp-step-category">Modelo de Actores</p>
 
         <div style={{ maxWidth: '1000px', width: '100%' }}>
@@ -108,7 +108,7 @@ const resolution = (
         PASO 02 — CASOS DE USO (USE CASES)
         ════════════════════════════════════════════════════════ */}
     <div className="pp-step">
-      <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflowY: 'auto', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 82%', justifyContent: 'center', alignItems: 'center' }}>
+      <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflowY: 'auto', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 72%', justifyContent: 'center', alignItems: 'center' }}>
         <p className="pp-step-category">Especificación Funcional</p>
 
         <div style={{ maxWidth: '800px', width: '100%' }}>
@@ -175,7 +175,7 @@ const resolution = (
         PASO 03 — MATRIZ DE RESPONSABILIDADES
         ════════════════════════════════════════════════════════ */}
     <div className="pp-step">
-      <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflowY: 'auto', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 82%', justifyContent: 'center', alignItems: 'center' }}>
+      <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflowY: 'auto', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 72%', justifyContent: 'center', alignItems: 'center' }}>
         <p className="pp-step-category">Mapping de Actores y Funciones</p>
 
         <div style={{ maxWidth: '900px', width: '100%' }}>
