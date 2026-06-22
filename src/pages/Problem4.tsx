@@ -46,7 +46,7 @@ const resolution = (
     <div className="pp-step">
       <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflowY: 'auto', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 72%', justifyContent: 'center', alignItems: 'center' }}>
         <p className="pp-step-category">Stack Tecnológico</p>
-        
+
         <div className="responsive-grid-1" style={{ marginTop: '1.5rem' }}>
           <div style={{
             background: 'rgba(255, 193, 7, 0.1)',
@@ -104,7 +104,7 @@ const resolution = (
     <div className="pp-step">
       <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflowY: 'auto', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 72%', justifyContent: 'center', alignItems: 'center' }}>
         <p className="pp-step-category">La Capa de Inteligencia (Machine Learning)</p>
-        
+
         <div style={{ maxWidth: '800px', width: '100%', marginTop: '1.5rem' }}>
           <div style={{
             background: 'rgba(255, 193, 7, 0.1)',
@@ -113,7 +113,7 @@ const resolution = (
             padding: '2rem',
             textAlign: 'center'
           }}>
-            <p style={{ color: C_YELLOW, fontWeight: 'bold', fontSize: '1.3em', marginBottom: '1rem', fontFamily: 'Inter, sans-serif' }}>🧠 Bibliotecas Científicas</p>
+            <p style={{ color: C_YELLOW, fontWeight: 'bold', fontSize: '1.3em', marginBottom: '1rem', fontFamily: 'Inter, sans-serif' }}>🧠 La Capa de Inteligencia (Machine Learning)</p>
             <p style={{ fontSize: '1.1em', color: 'rgba(255,255,255,0.85)', lineHeight: '1.6', fontFamily: 'Inter, sans-serif' }}>
               Integramos bibliotecas como <strong>scikit-learn</strong> y <strong>pandas</strong> para tomar el historial de ventas de la base de datos y generar simulaciones de escenarios y proyecciones de demanda.
             </p>
@@ -139,7 +139,7 @@ const resolution = (
     <div className="pp-step">
       <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflowY: 'auto', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 72%', justifyContent: 'center', alignItems: 'center' }}>
         <p className="pp-step-category">Entidades del Negocio</p>
-        
+
         <div className="responsive-grid-2" style={{ marginTop: '1rem' }}>
           {classes.slice(0, 6).map((cls, idx) => (
             <div key={idx} style={{
@@ -179,7 +179,7 @@ const resolution = (
     <div className="pp-step">
       <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflowY: 'auto', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 72%', justifyContent: 'center', alignItems: 'center' }}>
         <p className="pp-step-category">Entidades del Negocio</p>
-        
+
         <div className="responsive-grid-2" style={{ marginTop: '1rem' }}>
           {classes.slice(6, 10).map((cls, idx) => (
             <div key={idx} style={{
@@ -236,7 +236,7 @@ const resolution = (
     <div className="pp-step">
       <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflowY: 'auto', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '0 0 72%', justifyContent: 'center', alignItems: 'center' }}>
         <p className="pp-step-category">Integración de Capas</p>
-        
+
         <div style={{
           background: 'rgba(255, 193, 7, 0.05)',
           border: `2px dashed ${C_YELLOW}`,
