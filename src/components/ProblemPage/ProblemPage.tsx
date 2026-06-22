@@ -224,37 +224,39 @@ export default function ProblemPage(props: ProblemPageProps) {
       {/* ══════════════════════════════════════════
           APPROACH — Minimal Swiss Editorial Layout
           ══════════════════════════════════════════ */}
-      <section className="pp-approach">
-        <div className="pp-approach-grid">
+      {approach && (
+        <section className="pp-approach">
+          <div className="pp-approach-grid">
 
-          <motion.div
-            className="pp-approach-left"
-            variants={fadeLeft}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.65 }}
-          >
-            <h2 className="pp-approach-heading-minimal">
-              <span className="pp-approach-bullet">•</span> Estrategia de resolución
-            </h2>
-          </motion.div>
+            <motion.div
+              className="pp-approach-left"
+              variants={fadeLeft}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: '-80px' }}
+              transition={{ duration: 0.65 }}
+            >
+              <h2 className="pp-approach-heading-minimal">
+                <span className="pp-approach-bullet">•</span> Estrategia de resolución
+              </h2>
+            </motion.div>
 
-          <motion.div
-            className="pp-approach-right"
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.65, delay: 0.15 }}
-          >
-            <div className="pp-approach-body">
-              {approach}
-            </div>
-          </motion.div>
+            <motion.div
+              className="pp-approach-right"
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: '-80px' }}
+              transition={{ duration: 0.65, delay: 0.15 }}
+            >
+              <div className="pp-approach-body">
+                {approach}
+              </div>
+            </motion.div>
 
-        </div>
-      </section>
+          </div>
+        </section>
+      )}
 
       {/* ══════════════════════════════════════════
           RESOLUTION — Full-screen step slides

@@ -13,19 +13,6 @@ const theoryItems = [
   'Bases de Datos',
 ]
 
-const approach = (
-  <>
-    <p>
-      El sistema está estructurado sobre dos módulos centrales que cubren necesidades operativas y estratégicas diferenciadas:
-    </p>
-    <p>
-      Primero, el <strong>núcleo transaccional</strong>, que permite registro concurrente de ventas, actualización automática de stock en tiempo real y administración de cuentas corrientes por cliente.
-    </p>
-    <p>
-      Segundo, el <strong>módulo analítico-gerencial</strong>, que provee un dashboard de métricas en tiempo real, predicción matemática de quiebres de stock usando análisis histórico, y un simulador de escenarios empresariales para anticipar impactos financieros antes de implementar cambios.
-    </p>
-  </>
-)
 // ─── Resolution steps ─────────────────────────────────────────────────────────
 
 const resolution = (
@@ -73,7 +60,49 @@ const resolution = (
     </div>
 
     {/* ════════════════════════════════════════════════════════
-        PASO 02 — LIMITACIONES DELIBERADAS (Ex PASO 03)
+        PASO 02 — MÓDULO ANALÍTICO
+        ════════════════════════════════════════════════════════ */}
+    <div className="pp-step">
+      <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '1', justifyContent: 'center', alignItems: 'center' }}>
+        <p className="pp-step-category">Módulo 2: Inteligencia Empresarial</p>
+        
+        <div style={{ maxWidth: '800px', width: '100%' }}>
+          <ul style={{ margin: '0', padding: '0 0 0 1.5rem', lineHeight: '1.8', color: 'rgba(255,255,255,0.8)', fontSize: '1.05em', fontFamily: 'Inter, sans-serif' }}>
+            <li><strong style={{ color: C_PINK }}>Dashboard en Tiempo Real:</strong> KPIs de ventas, stock por sucursal, clientes principales</li>
+            <li><strong style={{ color: C_PINK }}>Predicción de Quiebres:</strong> Análisis histórico + umbral de reorden automático</li>
+            <li><strong style={{ color: C_PINK }}>Simulador What-If:</strong> Proyecta escenarios (ej: "Si subo 10% el precio, ¿impacto en ventas?")</li>
+            <li><strong style={{ color: C_PINK }}>Alertas Inteligentes:</strong> Notificaciones de productos críticos y anomalías</li>
+          </ul>
+          <div style={{
+            background: 'rgba(217, 119, 144, 0.1)',
+            border: `2px solid ${C_PINK}`,
+            borderRadius: '8px',
+            padding: '1rem',
+            marginTop: '2rem',
+            fontFamily: 'monospace',
+            fontSize: '1em',
+            color: '#fff',
+            textAlign: 'center'
+          }}>
+            Dashboard: Ventas Hoy | Stock Crítico | Top 10 Productos | Proyección 30 días
+          </div>
+        </div>
+      </div>
+      <div className="pp-step-lower">
+        <div className="pp-step-body">
+          <p>
+            Transforma datos transaccionales en decisiones estratégicas, permitiendo a la gerencia anticiparse a los escenarios.
+          </p>
+        </div>
+        <div className="pp-step-title-row">
+          <div className="pp-step-num-col"><span className="pp-step-num-circle">2</span></div>
+          <div className="pp-step-content"><h3 className="pp-step-heading">Análisis y Simulación</h3></div>
+        </div>
+      </div>
+    </div>
+
+    {/* ════════════════════════════════════════════════════════
+        PASO 03 — LIMITACIONES DELIBERADAS
         ════════════════════════════════════════════════════════ */}
     <div className="pp-step">
       <div className="pp-step-anim-rect" style={{ background: '#0a0a0a', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', padding: '2rem', flex: '1', justifyContent: 'center', alignItems: 'center' }}>
@@ -137,7 +166,7 @@ const resolution = (
           </p>
         </div>
         <div className="pp-step-title-row">
-          <div className="pp-step-num-col"><span className="pp-step-num-circle">2</span></div>
+          <div className="pp-step-num-col"><span className="pp-step-num-circle">3</span></div>
           <div className="pp-step-content"><h3 className="pp-step-heading">¿Qué NO incluye el sistema?</h3></div>
         </div>
       </div>
@@ -154,7 +183,7 @@ export default function Problem2() {
       question="¿Cuáles son los módulos centrales del sistema y qué deliberadamente no incluye?"
       accent={ACCENT}
       theoryItems={theoryItems}
-      approach={approach}
+      approach={null}
       resolution={resolution}
     />
   )
