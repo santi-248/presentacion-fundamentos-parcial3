@@ -14,10 +14,13 @@ const theoryItems = [
 const approach = (
   <>
     <p>
-      Para garantizar la escalabilidad y un rendimiento óptimo, el sistema FARO se fundamenta en una arquitectura desacoplada estructurada en capas:
+      Para garantizar la escalabilidad y un rendimiento óptimo, el sistema FARO se fundamenta en una arquitectura desacoplada estructurada en capas.
     </p>
     <p>
-      El dominio del negocio está representado por <strong>10 clases de negocio</strong> que modelan entidades del mundo real (Producto, Stock, Venta, Cliente, Usuario, etc.). Cada clase encapsula lógica de validación y comportamiento específico, permitiendo evolucionar la solución sin cambios abruptos en la interfaz.
+      El dominio del negocio está representado por <strong>10 clases de negocio</strong> que modelan entidades del mundo real.
+    </p>
+    <p>
+      Cada clase encapsula lógica de validación y comportamiento específico, permitiendo evolucionar la solución sin cambios abruptos en la interfaz.
     </p>
   </>
 )
